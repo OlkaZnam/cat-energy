@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1:not([class]):not(:last-child),
+.h1:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+h2:not([class]):not(:last-child),
+.h2:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+p:not([class]):not(:last-child),
+ul:not([class]):not(:last-child),
+img:not([class]):not(:last-child),
+table:not([class]):not(:last-child),
+blockquote:not([class]):not(:last-child) {
+  margin-bottom: 16px;
+}
+
+li:not([class]):not(:last-child) {
+  margin-bottom: 10px;
+}

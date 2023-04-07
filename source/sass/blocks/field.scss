@@ -1,0 +1,15 @@
+.field__input {
+  padding: 14px 15px;
+}
+
+.field__input::placeholder {
+  font-family: $title-font;
+  font-size: 16px;
+  line-height: 1.12;
+  text-transform: uppercase;
+  color: $main-text-color;
+}
+
+.field__lead {
+  margin-right: 12px;
+}

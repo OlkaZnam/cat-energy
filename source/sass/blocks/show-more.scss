@@ -1,0 +1,28 @@
+.show-more {
+  padding: 25px 0;
+  border-top: 1px solid #EBEBEB;
+}
+
+.show-more__heading {
+  margin-bottom: 8px;
+  font-family: $title-font;
+  font-size: 16px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  color: $contacts-text-color;
+}
+
+.show-more__text {
+  margin-bottom: 21px;
+  font-family: $text-font;
+  font-size: 12px;
+  line-height: 1.33;
+  color: $main-text-color;
+}
+
+.show-more__button {
+  font-size: 16px;
+  line-height: 1.25;
+  color: $main-text-color;
+  background-color: $bg-color;
+}
