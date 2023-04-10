@@ -1,12 +1,13 @@
 .offer {
   min-height: 290px;
   background: url("../../img/background/offer-bg.jpg");
+  background-color: $main-color;
   padding: 35px 0;
-}
 
-.offer__text {
-  font-family: $text-font;
-  font-size: 16px;
-  line-height: 1.25;
-  color: $contrast-text-color;
+  &__text {
+    font-family: $text-font;
+    font-size: 16px;
+    line-height: 1.25;
+    color: $contrast-text-color;
+  }
 }

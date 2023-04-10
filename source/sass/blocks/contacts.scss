@@ -1,23 +1,23 @@
 .contacts {
   padding-top: 26px;
-}
 
-.contacts--index {
-  background-color: $contrast-text-color;
-}
+  &--index {
+    background-color: $contrast-text-color;
+  }
 
-.contacts__heading {
-  font-family: $title-font;
-  font-size: 16px;
-  line-height: 1.25;
-  text-transform: uppercase;
-  color: $contacts-text-color;
-}
+  &__heading {
+    font-family: $title-font;
+    font-size: 16px;
+    line-height: 1.25;
+    text-transform: uppercase;
+    color: $contacts-text-color;
+  }
 
-.contacts__address {
-  margin-bottom: 26px;
-  font-family: $text-font;
-  font-size: 14px;
-  line-height: 1.43;
-  color: $main-text-color;
+  &__address {
+    margin-bottom: 26px;
+    font-family: $text-font;
+    font-size: 14px;
+    line-height: 1.43;
+    color: $main-text-color;
+  }
 }

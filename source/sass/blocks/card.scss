@@ -1,27 +1,27 @@
 .card {
   padding: 19px 0 25px;
   border-top: 1px solid #EBEBEB;
-}
 
-.card__link {
-  text-decoration: none;
-}
+  &__link {
+    text-decoration: none;
+  }
 
-.card__heading {
-  margin-bottom: 14px;
-  font-family: $title-font;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
-  text-transform: uppercase;
-  color: $heading-color;
-}
+  &__heading {
+    margin-bottom: 14px;
+    font-family: $title-font;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    text-transform: uppercase;
+    color: $heading-color;
+  }
 
-.card__list {
-  margin-bottom: 22px;
-  font-family: $text-font;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.33;
-  color: $main-text-color;
+  &__list {
+    margin-bottom: 22px;
+    font-family: $text-font;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.33;
+    color: $main-text-color;
+  }
 }

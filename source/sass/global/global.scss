@@ -14,12 +14,14 @@ h2:not([class]):not(:last-child),
   margin-bottom: 24px;
 }
 
-p:not([class]):not(:last-child),
-ul:not([class]):not(:last-child),
-img:not([class]):not(:last-child),
-table:not([class]):not(:last-child),
-blockquote:not([class]):not(:last-child) {
-  margin-bottom: 16px;
+p,
+ul,
+img,
+table,
+blockquote {
+  &:not([class]):not(:last-child) {
+    margin-bottom: 16px;
+  }
 }
 
 li:not([class]):not(:last-child) {

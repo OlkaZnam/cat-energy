@@ -5,8 +5,8 @@
   line-height: 1.12;
   color: $main-text-color;
   text-transform: uppercase;
-}
 
-.form__button {
-  margin-bottom: 21px;
+  &__button {
+    margin-bottom: 21px;
+  }
 }

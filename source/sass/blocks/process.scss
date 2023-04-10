@@ -1,23 +1,23 @@
 .process {
   margin-bottom: 49px;
-}
 
-.process .page-main__title {
-  margin-bottom: 40px;
-}
+  .page-main__title {
+    margin-bottom: 40px;
+  }
 
-.process__list {
-  font-family: $text-font;
-  font-size: 14px;
-  line-height: 1.29;
-  color: $main-text-color;
-}
+  &__list {
+    font-family: $text-font;
+    font-size: 14px;
+    line-height: 1.29;
+    color: $main-text-color;
+  }
 
-.process__item {
-  margin-bottom: 20px;
-  list-style-type: none;
-}
+  &__item {
+    margin-bottom: 20px;
+    list-style-type: none;
+  }
 
-.process__item:last-child {
-  margin-bottom: 0;
+  &__item:last-child {
+    margin-bottom: 0;
+  }
 }
