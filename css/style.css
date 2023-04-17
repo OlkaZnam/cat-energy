@@ -1,13 +1,13 @@
 @font-face {
   font-family: "Oswald";
-  src: url("../../fonts/oswald-regular.woff2") format("woff2"), url("../../fonts/oswald-regular.woff") format("woff");
+  src: url("../fonts/oswald-regular.woff2") format("woff2"), url("../fonts/oswald-regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Oswald";
-  src: url("../../fonts/oswald-medium.woff2") format("woff2"), url("../../fonts/oswald-medium.woff") format("woff");
+  src: url("../fonts/oswald-medium.woff2") format("woff2"), url("../fonts/oswald-medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -159,7 +159,7 @@ li:not([class]):not(:last-child) {
 .main-nav__toggle {
   width: 40px;
   height: 40px;
-  background: url("../../img/icons/open-menu.svg") no-repeat center;
+  background: url("../img/icons/open-menu.svg") no-repeat center;
   background-color: transparent;
   border: none;
 }
@@ -175,7 +175,7 @@ li:not([class]):not(:last-child) {
   font-family: "Oswald", "Arial", sans-serif;
   color: #FFFFFF;
   text-align: center;
-  background: url("../../img/background/promo-bg.jpg"), linear-gradient(#63a63b 0, #63a63b 302px, #FFFFFF 302px);
+  background: url("../img/background/promo-bg.jpg"), linear-gradient(#63a63b 0, #63a63b 302px, #FFFFFF 302px);
   background-color: #68B738;
   background-repeat: no-repeat;
   background-position: 50% 0;
@@ -205,7 +205,7 @@ li:not([class]):not(:last-child) {
     background-color: #63a63b;
     background-position: 0 100%;
     background-repeat: no-repeat;
-    background-image: url(../../img/background/promo-large.jpg);
+    background-image: url(../img/background/promo-large.jpg);
   }
 }
 @media (min-width: 768px) {
@@ -442,7 +442,7 @@ li:not([class]):not(:last-child) {
   }
 }
 .catalog-sections__title--slim::after {
-  background-image: url("../../img/icons/cat-slim.svg");
+  background-image: url("../img/icons/cat-slim.svg");
 }
 @media (min-width: 768px) {
   .catalog-sections__title--slim::after {
@@ -455,7 +455,7 @@ li:not([class]):not(:last-child) {
   }
 }
 .catalog-sections__title--pro::after {
-  background-image: url("../../img/icons/cat-pro.svg");
+  background-image: url("../img/icons/cat-pro.svg");
 }
 @media (min-width: 768px) {
   .catalog-sections__title--pro::after {
@@ -512,7 +512,7 @@ li:not([class]):not(:last-child) {
   width: 24px;
   height: 12px;
   content: "";
-  background: url("../../img/icons/arrow.svg") center no-repeat;
+  background: url("../img/icons/arrow.svg") center no-repeat;
 }
 @media (min-width: 768px) {
   .catalog-sections__link::after {
@@ -623,16 +623,16 @@ li:not([class]):not(:last-child) {
   margin-bottom: 0;
 }
 .process__item--leaf::before {
-  background-image: url("../../img/icons/leaf.svg");
+  background-image: url("../img/icons/leaf.svg");
 }
 .process__item--powder::before {
-  background-image: url("../../img/icons/tub.svg");
+  background-image: url("../img/icons/tub.svg");
 }
 .process__item--meal::before {
-  background-image: url("../../img/icons/eat.svg");
+  background-image: url("../img/icons/eat.svg");
 }
 .process__item--weight::before {
-  background-image: url("../../img/icons/alarm.svg");
+  background-image: url("../img/icons/alarm.svg");
 }
 
 .example {
@@ -1002,7 +1002,7 @@ li:not([class]):not(:last-child) {
 
 .offer {
   min-height: 290px;
-  background: url("../../img/background/offer-bg.jpg");
+  background: url("../img/background/offer-bg.jpg");
   background-color: #68B738;
   padding: 35px 0;
 }
@@ -1155,7 +1155,7 @@ li:not([class]):not(:last-child) {
   }
 }
 .social__item--vk {
-  background-image: url("../../img/icons/vk.svg");
+  background-image: url("../img/icons/vk.svg");
 }
 @media (min-width: 768px) {
   .social__item--vk {
@@ -1163,7 +1163,7 @@ li:not([class]):not(:last-child) {
   }
 }
 .social__item--instagram {
-  background-image: url("../../img/icons/instagram.svg");
+  background-image: url("../img/icons/instagram.svg");
 }
 @media (min-width: 768px) {
   .social__item--instagram {
@@ -1171,7 +1171,7 @@ li:not([class]):not(:last-child) {
   }
 }
 .social__item--facebook {
-  background-image: url("../../img/icons/facebook.svg");
+  background-image: url("../img/icons/facebook.svg");
 }
 @media (min-width: 768px) {
   .social__item--facebook {
