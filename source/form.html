@@ -10,60 +10,64 @@
 
 <body>
 <header class="page__header page-header">
-  <div class="container">
-    <a class="page-header__logo logo">
-      <img
-        class="logo__image"
-        src="img/logo/logo-mobile.svg"
-        alt="Cat Energy"
-        width="34"
-        height="38"
-        loading="lazy"
-      >
-      <img
-        class="logo__sign"
-        src="img/logo/logo-sign.svg"
-        alt=""
-        aria-hidden="true"
-        width="101"
-        height="18"
-        loading="lazy"
-      >
-    </a>
+  <nav class="page-header__nav main-nav">
+    <div class="container">
+      <div class="page-header__bar">
+        <a class="page-header__logo logo">
+          <img
+            class="logo__image"
+            src="img/logo/logo-mobile.svg"
+            alt="Cat Energy"
+            width="34"
+            height="38"
+            loading="lazy"
+          >
+          <img
+            class="logo__sign"
+            src="img/logo/logo-sign.svg"
+            alt=""
+            aria-hidden="true"
+            width="101"
+            height="18"
+            loading="lazy"
+          >
+        </a>
 
-    <nav class="page-header__nav main-nav">
-      <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+      </div>
+    </div>
 
-      <ul class="main-nav__list">
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="index.html">Главная</a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
-        </li>
-        <li class="main-nav__item main-nav__item--current">
-          <a class="main-nav__link">Подбор программы</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
+    <ul class="main-nav__list">
+      <li class="main-nav__item">
+        <a class="main-nav__link" href="index.html">Главная</a>
+      </li>
+      <li class="main-nav__item">
+        <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+      </li>
+      <li class="main-nav__item  main-nav__item--current">
+        <a class="main-nav__link">Подбор программы</a>
+      </li>
+    </ul>
+  </nav>
 </header>
 
 <main class="page__main page-main program">
   <div class="container">
     <h1 class="page-main__title">Подбор программы</h1>
     <p class="page-main__subtitle">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+  </div>
 
-    <form
-      class="page-main__section form"
-      method="post"
-      action="https://echo.htmlacademy.ru/"
-    >
-      <h2 class="visually-hidden">Форма анкеты</h2>
+  <form
+    class="page-main__section form"
+    method="post"
+    action="https://echo.htmlacademy.ru/"
+  >
+    <h2 class="visually-hidden">Форма анкеты</h2>
 
-      <fieldset class="form__group field-group cat">
+    <fieldset class="form__group field-group cat">
+      <div class="container">
         <legend class="visually-hidden">Данные кота</legend>
 
         <ul class="field-group__list">
@@ -104,9 +108,11 @@
             </label>
           </li>
         </ul>
-      </fieldset>
+      </div>
+    </fieldset>
 
-      <fieldset class="form__group field-group aim">
+    <fieldset class="form__group field-group aim">
+      <div class="container">
         <legend class="visually-hidden">Цель программы</legend>
 
         <ul class="field-group__list">
@@ -144,9 +150,11 @@
             </label>
           </li>
         </ul>
-      </fieldset>
+      </div>
+    </fieldset>
 
-      <fieldset class="form__group field-group master">
+    <fieldset class="form__group field-group master">
+      <div class="container">
         <legend class="field-group__title">Контактные данные (владельца кота)</legend>
 
         <ul class="field-group__list">
@@ -175,9 +183,11 @@
             </label>
           </li>
         </ul>
-      </fieldset>
+      </div>
+    </fieldset>
 
-      <div class="form__group field-group comment">
+    <div class="form__group field-group comment">
+      <div class="container">
         <label class="field-group__title" for="comment">Комментарий</label>
 
         <div class="field">
@@ -191,8 +201,10 @@
           </textarea>
         </div>
       </div>
+    </div>
 
-      <fieldset class="form__group field-group additional">
+    <fieldset class="form__group field-group additional">
+      <div class="container">
         <legend class="field-group__title">Дополнительно</legend>
 
         <ul class="field-group__list">
@@ -242,12 +254,15 @@
             </label>
           </li>
         </ul>
-      </fieldset>
+      </div>
+    </fieldset>
 
+    <div class="container">
       <button class="form__button button" type="submit">Отправить заявку</button>
       <p class="form__additional">* — Обязательные поля</p>
-    </form>
-  </div>
+    </div>
+  </form>
+
 </main>
 
 <footer class="page__footer page-footer">

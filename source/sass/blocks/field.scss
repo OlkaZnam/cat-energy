@@ -1,6 +1,13 @@
 .field {
+  display: flex;
+  align-items: center;
+
   &__input {
     padding: 14px 15px;
+  }
+
+  &__input {
+    flex-grow: 1;
   }
 
   &__input::placeholder {
