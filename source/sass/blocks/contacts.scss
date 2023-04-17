@@ -1,8 +1,45 @@
 .contacts {
   padding-top: 26px;
 
+  @media (min-width: $tablet-width) {
+    padding-top: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 139px);
+    column-gap: 2px;
+    margin-bottom: 26px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 56px;
+      grid-template-columns: 212px 160px;
+      column-gap: 300px;
+    }
+
+    @media (min-width: $desktop-width) {
+      position: absolute;
+      top: 95px;
+      left: 110px;
+      grid-template-columns: 163px 155px;
+      column-gap: 87px;
+      margin-bottom: 0;
+      padding: 60px 80px 56px 80px;
+      max-width: 565px;
+      background-color: $contrast-text-color;
+    }
+  }
+
   &--index {
     background-color: $contrast-text-color;
+
+    @media (min-width: $desktop-width) {
+      position: relative;
+    }
   }
 
   &__heading {
@@ -11,13 +48,40 @@
     line-height: 1.25;
     text-transform: uppercase;
     color: $contacts-text-color;
+
+    @media (min-width: $tablet-width) {
+      padding-left: 40px;
+      font-size: 20px;
+      line-height: 1.3;
+    }
+
+    @media (min-width: $tablet-width) {
+      padding-left: 0;
+    }
   }
 
   &__address {
-    margin-bottom: 26px;
     font-family: $text-font;
     font-size: 14px;
     line-height: 1.43;
     color: $main-text-color;
+
+    @media (min-width: $tablet-width) {
+      font-size: 16px;
+      line-height: 1.25;
+      text-align: right;
+    }
+  }
+
+  &__city {
+    @media (min-width: $tablet-width) {
+      display: block;
+      padding-top: 20px;
+    }
+  }
+
+  &__map {
+    display: block;
+    width: 100%;
   }
 }

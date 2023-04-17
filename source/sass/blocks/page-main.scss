@@ -5,6 +5,11 @@
     font-size: 36px;
     line-height: 1.11;
     color: $title-color;
+
+    @media (min-width: $tablet-width) {
+      font-size: 60px;
+      line-height: 1;
+    }
   }
 
   &__subtitle {
