@@ -1,0 +1,93 @@
+.control {
+  position: relative;
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 16px;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 40px 1fr;
+    gap: 20px;
+  }
+
+  &--radio {
+    .control__input:checked + .control__lead::after {
+      position: absolute;
+      top: 2px;
+      left: 9px;
+      width: 14px;
+      height: 14px;
+      background-color: $main-color;
+      border-radius: 50%;
+      content: "";
+      
+      @media (min-width: $tablet-width) {
+        top: 7px;
+        left: 11px;
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    .control__lead {
+      grid-column: 2 / 3;
+
+      &::before {
+        position: absolute;
+        top: calc(50% - 15px);
+        left: 0;
+        width: 30px;
+        height: 30px;
+        border: 1px solid #cdcdcd;
+        border-radius: 50%;
+        content: "";
+
+        @media (min-width: $tablet-width) {
+          top: calc(50% - 20px);
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+
+  &--checkbox {
+    .control__input:checked + .control__lead::after {
+      position: absolute;
+      top: 2px;
+      left: 6px;
+      width: 20px;
+      height: 20px;
+      background: url("../../img/icons/check.svg") no-repeat;
+      content: "";
+
+      @media (min-width: $tablet-width) {
+        top: 9px;
+        left: 11px;
+      }
+
+    }
+
+    .control__lead {
+      grid-column: 2 / 3;
+
+      &::before {
+        position: absolute;
+        top: calc(50% - 15px);
+        left: 0;
+        width: 30px;
+        height: 30px;
+        border: 1px solid #cdcdcd;
+        content: "";
+
+        @media (min-width: $tablet-width) {
+          top: calc(50% - 20px);
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+
+
+  }
+}

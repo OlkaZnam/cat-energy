@@ -1,0 +1,23 @@
+.page-main {
+  &__title {
+    font-family: $title-font;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1.11;
+    color: $title-color;
+
+    @media (min-width: $tablet-width) {
+      font-size: 60px;
+      line-height: 1;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 39px;
+    font-family: $title-font;
+    font-size: 14px;
+    line-height: 1.29;
+    text-transform: uppercase;
+    color: $title-color;
+  }
+}

@@ -25,30 +25,32 @@
       height: 33px;
       margin: 14px;
     }
-  }
 
-  &__item--vk {
-    background-image: url("../../img/icons/vk.svg");
+    &--vk {
+      background-image: url("../../img/icons/vk.svg");
 
-    @media (min-width: $tablet-width) {
-      background-size: 30px 22px;
+      @media (min-width: $tablet-width) {
+        background-size: 30px 22px;
+      }
+    }
+
+    &--instagram {
+      background-image: url("../../img/icons/instagram.svg");
+
+      @media (min-width: $tablet-width) {
+        background-size: 23px 23px;
+      }
+    }
+
+    &--facebook {
+      background-image: url("../../img/icons/facebook.svg");
+
+      @media (min-width: $tablet-width) {
+        background-size: 28px 32px;
+      }
     }
   }
 
-  &__item--instagram {
-    background-image: url("../../img/icons/instagram.svg");
 
-    @media (min-width: $tablet-width) {
-      background-size: 23px 23px;
-    }
-  }
-
-  &__item--facebook {
-    background-image: url("../../img/icons/facebook.svg");
-
-    @media (min-width: $tablet-width) {
-      background-size: 28px 32px;
-    }
-  }
 }
 

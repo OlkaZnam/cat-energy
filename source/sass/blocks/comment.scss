@@ -1,8 +1,21 @@
 .comment {
   margin-bottom: 23px;
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 65px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / -1;
+    margin-bottom: 67px;
+  }
+
   .field-group__title {
     display: block;
     margin-bottom: 37px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 76px;
+    }
   }
 }

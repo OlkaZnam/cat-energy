@@ -1,0 +1,21 @@
+.field-group {
+  border: none;
+
+  &__title {
+    font-family: $title-font;
+    font-size: 24px;
+    line-height: 1.08;
+    color: $title-color;
+    text-transform: none;
+  }
+
+  &__item {
+    margin-bottom: 14px;
+    list-style-type: none;
+  }
+
+  &__item:last-child {
+    margin-bottom: 0;
+  }
+}
+

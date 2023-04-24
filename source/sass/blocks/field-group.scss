@@ -2,20 +2,31 @@
   border: none;
 
   &__title {
+    max-width: 195px;
     font-family: $title-font;
     font-size: 24px;
     line-height: 1.08;
     color: $title-color;
     text-transform: none;
+    background-color: $contrast-text-color;
+    
+    @media (min-width: $tablet-width) {
+      max-width: 512px;
+      font-size: 36px;
+      line-height: 1;
+    }
   }
 
   &__item {
     margin-bottom: 14px;
     list-style-type: none;
-  }
+    
+    @media (min-width: $tablet-width) {
+      margin-bottom: 20px;
+    }
 
-  &__item:last-child {
-    margin-bottom: 0;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
-

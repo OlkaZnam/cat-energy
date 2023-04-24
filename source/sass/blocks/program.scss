@@ -3,10 +3,25 @@
 
   .page-main__title {
     margin-bottom: 37px;
+    
+    @media (min-width: $tablet-width) {
+      margin-bottom: 54px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 56px;
+    }
   }
 
   .page-main__subtitle {
     margin-bottom: 39px;
     max-width: 226px;
+
+    @media (min-width: $tablet-width) {
+      max-width: 323px;
+      margin-bottom: 66px;
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 }

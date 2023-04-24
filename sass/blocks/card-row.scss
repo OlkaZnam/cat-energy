@@ -1,0 +1,22 @@
+.card-row {
+  border-top: 1px solid #CDCDCD;
+  padding: 13px 0 19px;
+
+  &__heading {
+    margin-bottom: 13px;
+    font-family: $title-font;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: $heading-color;
+  }
+
+  &__list {
+    margin-bottom: 15px;
+    font-family: $text-font;
+    font-size: 14px;
+    line-height: 1;
+    color: $main-text-color;
+  }
+}

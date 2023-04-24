@@ -1,6 +1,29 @@
 .card-row {
-  border-top: 1px solid #CDCDCD;
   padding: 13px 0 19px;
+  border-bottom: 1px solid #CDCDCD;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 225px;
+    grid-template-areas: "headind list"
+                         "button button";
+    padding: 26px 38px 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 244px;
+    grid-template-areas: "headind list button";
+    gap: 38px;
+    align-items: center;
+    padding: 15px 0 17px;
+  }
+
+  &:last-child {
+    @media (min-width: $tablet-width) {
+      border-bottom: none;
+    }
+  }
 
   &__heading {
     margin-bottom: 13px;
@@ -10,13 +33,57 @@
     line-height: 1;
     text-transform: uppercase;
     color: $heading-color;
+
+    @media (min-width: $tablet-width) {
+      grid-area: headind;
+      margin-bottom: 25px;
+      font-size: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 0;
+    }
   }
 
   &__list {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 15px;
     font-family: $text-font;
     font-size: 14px;
     line-height: 1;
     color: $main-text-color;
+
+    @media (min-width: $tablet-width) {
+      display: grid;
+      grid-template-columns: 1fr 82px;
+      grid-area: list;
+      font-size: 16px;
+      line-height: 1.25;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__definition {
+    @media (min-width: $tablet-width) {
+      text-align: right;
+    }
+
+    @media (min-width: $desktop-width) {
+      text-align: left;
+    }
+  }
+
+  &__button {
+    width: 100%;
+
+    @media (min-width: $tablet-width) {
+      grid-area: button;
+      min-height: 40px;
+      font-size: 16px;
+    }
   }
 }

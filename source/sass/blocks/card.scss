@@ -1,12 +1,28 @@
 .card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "img link"
+                       "img list"
+                       "button button";
   padding: 19px 0 25px;
   border-top: 1px solid #EBEBEB;
 
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 37px 39px;
+    border-top: none;
+    background-image: linear-gradient(to bottom, $contrast-text-color 80px, $bg-color 80px);
+  }
+
   &__link {
+    grid-area: link;
     text-decoration: none;
   }
 
   &__heading {
+    max-width: 76px;
     margin-bottom: 14px;
     font-family: $title-font;
     font-weight: 400;
@@ -14,14 +30,76 @@
     line-height: 1.25;
     text-transform: uppercase;
     color: $heading-color;
+
+    @media (min-width: $tablet-width) {
+      max-width: 150px;
+      margin-bottom: 21px;
+      font-size: 20px;
+      line-height: 1.2;
+      text-align: center;
+    }
+
+    @media (min-width: $desktop-width) {
+      line-height: 1.05;
+    }
+  }
+
+  &__img {
+    order: -1;
+    grid-area: img;
+    align-self: center;
+    justify-self: center;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 28px;
+    }
   }
 
   &__list {
+    display: grid;
+    grid-area: list;
+    grid-template-columns: 1fr 1fr;
     margin-bottom: 22px;
     font-family: $text-font;
     font-weight: 400;
     font-size: 12px;
     line-height: 1.33;
     color: $main-text-color;
+
+    @media (min-width: $tablet-width) {
+      align-self: stretch;
+      margin-bottom: 33px;
+      font-size: 16px;
+      line-height: 16px;
+    }
+  }
+
+  &__title {
+    @media (min-width: $tablet-width) {
+      padding-top: 7px;
+      padding-bottom: 9px;
+      border-bottom: 1px solid #cdcdcd;
+    }
+  }
+
+  &__definition {
+    text-align: right;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 7px;
+      padding-bottom: 9px;
+      border-bottom: 1px solid #cdcdcd;
+    }
+  }
+
+  &__button {
+    grid-area: button;
+
+    @media (min-width: $tablet-width) {
+      align-self: stretch;
+      min-height: 40px;
+      font-size: 16px;
+      line-height: 1.25;
+    }
   }
 }

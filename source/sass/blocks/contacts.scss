@@ -6,6 +6,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    position: relative;
     padding-top: 0;
   }
 
@@ -64,6 +65,7 @@
     font-family: $text-font;
     font-size: 14px;
     line-height: 1.43;
+    font-style: normal;
     color: $main-text-color;
 
     @media (min-width: $tablet-width) {
@@ -83,5 +85,6 @@
   &__map {
     display: block;
     width: 100%;
+    object-fit: cover;
   }
 }

@@ -1,8 +1,47 @@
 .additional {
   margin-bottom: 34px;
+  
+  @media (min-width: $tablet-width) {
+    margin-bottom: 54px;
+  }
 
-  .field-group__title {
-    margin-bottom: 34px;
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / -1;
+    margin-bottom: 61px;
+  }
+
+  .field-group {
+    &__title {
+      margin-bottom: 34px;
+
+      @media (min-width: $tablet-width) {
+        margin-bottom: 57px;
+      }
+    }
+
+    &__list {
+      color: $title-color;
+
+      @media (min-width: $tablet-width) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px 80px;
+      }
+
+      @media (min-width: $desktop-width) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    &__item {
+      &:not(:last-of-type) {
+        margin-bottom: 25px;
+
+        @media (min-width: $tablet-width) {
+          margin-bottom: 0;
+        }
+      }
+    }
   }
 }
 

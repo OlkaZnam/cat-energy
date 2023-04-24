@@ -1,3 +1,15 @@
 .catalog-list {
-  margin-top: 41px;
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 68px 60px;
+    margin-bottom: 48px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 63px 80px;
+    margin-bottom: 55px;
+  }
 }
