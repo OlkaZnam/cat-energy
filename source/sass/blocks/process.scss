@@ -25,6 +25,7 @@
   }
 
   &__list {
+    margin: 0 auto;
     font-family: $text-font;
     font-size: 14px;
     line-height: 1.29;
@@ -34,11 +35,14 @@
       display: grid;
       grid-template-columns: repeat(2, 245px);
       gap: 37px 137px;
+      max-width: 708px;
+      margin: 0 auto;
       font-size: 16px;
       line-height: 1.5;
     }
 
     @media (min-width: $desktop-width) {
+      max-width: 1220px;
       grid-template-columns: repeat(4, 230px);
       gap: 25px 100px;
     }

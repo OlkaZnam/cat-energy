@@ -20,7 +20,8 @@
   &__item {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    max-width: 708px;
+    margin: 0 auto 20px auto;
     padding: 30px 33px 22px 20px;
     background-color: $bg-color;
 
