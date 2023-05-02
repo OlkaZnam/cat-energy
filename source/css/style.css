@@ -40,6 +40,13 @@ li:not([class]):not(:last-child) {
   margin-bottom: 10px;
 }
 
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -129,7 +136,7 @@ li:not([class]):not(:last-child) {
 @media (min-width: 768px) {
   .main-nav__item {
     font-size: 18px;
-    line-height: 1.33px;
+    line-height: 1.33;
     font-weight: 400;
   }
 }
@@ -1281,7 +1288,6 @@ li:not([class]):not(:last-child) {
   }
 }
 .card__img {
-  order: -1;
   grid-area: img;
   align-self: center;
   justify-self: center;
@@ -1329,6 +1335,7 @@ li:not([class]):not(:last-child) {
 }
 .card__button {
   grid-area: button;
+  margin-top: auto;
 }
 @media (min-width: 768px) {
   .card__button {
@@ -1344,13 +1351,13 @@ li:not([class]):not(:last-child) {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 78px 0 25px;
+  padding: 25px;
   text-align: center;
   border-top: 1px solid #EBEBEB;
 }
 @media (min-width: 768px) {
   .show-more {
-    padding: 161px 38px 38px;
+    padding: 38px;
     border: 1px solid #EBEBEB;
   }
 }
@@ -1371,9 +1378,8 @@ li:not([class]):not(:last-child) {
   }
 }
 .show-more__heading:before {
-  position: absolute;
-  top: 20px;
-  left: calc(50% - 15px);
+  display: block;
+  margin: 0 auto 50px auto;
   width: 30px;
   height: 30px;
   background: url("../../img/icons/plus.svg") center no-repeat;
@@ -1381,8 +1387,6 @@ li:not([class]):not(:last-child) {
 }
 @media (min-width: 768px) {
   .show-more__heading:before {
-    top: 52px;
-    left: calc(50% - 30px);
     width: 60px;
     height: 60px;
     background: url("../../img/icons/plus-large.svg");

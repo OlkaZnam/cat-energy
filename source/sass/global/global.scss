@@ -27,3 +27,10 @@ blockquote {
 li:not([class]):not(:last-child) {
   margin-bottom: 10px;
 }
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}

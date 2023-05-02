@@ -45,7 +45,6 @@
   }
 
   &__img {
-    order: -1;
     grid-area: img;
     align-self: center;
     justify-self: center;
@@ -94,6 +93,7 @@
 
   &__button {
     grid-area: button;
+    margin-top: auto;
 
     @media (min-width: $tablet-width) {
       align-self: stretch;
