@@ -933,10 +933,12 @@ button {
 }
 
 .field-group {
+  position: relative;
   border: none;
 }
 .field-group__title {
   max-width: 195px;
+  padding-right: 20px;
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
   line-height: 1.08;
@@ -944,11 +946,26 @@ button {
   text-transform: none;
   background-color: #FFFFFF;
 }
+.field-group__title:before {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  height: 2px;
+  background-color: #68B738;
+  content: "";
+}
 @media (min-width: 768px) {
   .field-group__title {
-    max-width: 512px;
+    max-width: 460px;
     font-size: 36px;
     line-height: 1;
+  }
+}
+@media (min-width: 1300px) {
+  .field-group__title {
+    max-width: 540px;
   }
 }
 .field-group__item {
@@ -975,6 +992,16 @@ button {
   line-height: 1.12;
   text-transform: uppercase;
   border: 1px solid #E7E7E7;
+}
+.field__input[name=e-mail] {
+  background-repeat: no-repeat;
+  background-position: right 20px top 50%;
+  background-image: url(../../img/icons/mail.svg);
+}
+.field__input[name=phone] {
+  background-repeat: no-repeat;
+  background-position: right 20px top 50%;
+  background-image: url(../../img/icons/phone.svg);
 }
 @media (min-width: 768px) {
   .field__input {
@@ -1165,6 +1192,7 @@ button {
 }
 @media (min-width: 768px) {
   .comment .field-group__title {
+    max-width: 198px;
     margin-bottom: 76px;
   }
 }

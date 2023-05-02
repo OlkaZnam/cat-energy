@@ -15,6 +15,7 @@
     margin-bottom: 37px;
 
     @media (min-width: $tablet-width) {
+      max-width: 198px;
       margin-bottom: 76px;
     }
   }

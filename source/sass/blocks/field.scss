@@ -10,6 +10,18 @@
     text-transform: uppercase;
     border: 1px solid #E7E7E7;
 
+    &[name=e-mail] {
+      background-repeat: no-repeat;
+      background-position: right 20px top 50%;
+      background-image: url(../../img/icons/mail.svg);
+    }
+
+    &[name=phone] {
+      background-repeat: no-repeat;
+      background-position: right 20px top 50%;
+      background-image: url(../../img/icons/phone.svg);
+    }
+
     @media (min-width: $tablet-width) {
       font-size: 20px;
       line-height: 1.5;

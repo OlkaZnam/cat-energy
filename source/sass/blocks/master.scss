@@ -1,6 +1,6 @@
 .master {
   margin: 26px 0 23px;
-  
+
   @media (min-width: $tablet-width) {
     margin: 75px 0 65px;
   }
@@ -10,11 +10,13 @@
     margin: 69px 0 67px;
   }
 
-  .field-group__title {
-    margin-bottom: 35px;
+  .field-group {
+    &__title {
+      margin-bottom: 35px;
 
-    @media (min-width: $tablet-width) {
-      margin-bottom: 76px;
+      @media (min-width: $tablet-width) {
+        margin-bottom: 76px;
+      }
     }
   }
 }
