@@ -1,6 +1,8 @@
+@import "../global/variables.scss";
+
 .offer {
   position: relative;
-  background: url("../../img/background/offer-bg.jpg");
+  background: url("../../img/background/offer-bg.jpg") no-repeat center;
   background-color: $main-color;
   padding: 186px 61px 43px 58px;
   text-align: center;
@@ -8,13 +10,13 @@
   @media (min-width: $tablet-width) {
     padding: 71px 124px 69px 422px;
     text-align: left;
-    background: url("../../img/background/offer-medium.jpg");
+    background: url("../../img/background/offer-medium.jpg") no-repeat center;
   }
 
   @media (min-width: $desktop-width) {
     padding: 185px 42px 42px;
     text-align: center;
-    background: url("../../img/background/offer-bg.jpg");
+    background: url("../../img/background/offer-bg.jpg") no-repeat center;
   }
 
   &::before {

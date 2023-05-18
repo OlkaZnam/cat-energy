@@ -1,14 +1,23 @@
+@import "../global/variables.scss";
+
 .promo {
   margin-bottom: 20px;
   padding: 27px 15px 0 16px;
   font-family: $title-font;
   color: $contrast-text-color;
   text-align: center;
-  background: url("../../img/background/promo-bg.jpg"),
+  background: url("../../img/background/promo/promo-small.jpg"),
   linear-gradient(#63a63b 0, #63a63b 302px, $contrast-text-color 302px);
   background-color: $main-color;
   background-repeat: no-repeat;
   background-position: 50% 0;
+
+  @media (min-resolution: 2dppx) {
+    background-size: auto 302px, auto;
+    background-image:
+            url("../../img/background/promo/promo-small@2x.jpg"),
+            linear-gradient(#63a63b 0, #63a63b 302px, $contrast-text-color 302px);
+  }
 
   @media (min-width: $tablet-width) {
     color: $title-color;
@@ -33,15 +42,21 @@
       background-color: #63a63b;
       background-position: 0 100%;
       background-repeat: no-repeat;
-      background-image: url(../../img/background/promo-large.jpg);
+      background-image: url(../../img/background/promo/promo-large.jpg);
+
+      @media (min-resolution: 2dppx) {
+        background-image:  url(../../img/background/promo/promo-large@2x.png);
+      }
     }
   }
 
   &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     @media (min-width: $tablet-width) {
       position: relative;
-      display: flex;
-      flex-direction: column;
       align-items: flex-start;
       padding: 0 90px 526px;
     }

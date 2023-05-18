@@ -1,3 +1,5 @@
+@import "../global/variables.scss";
+
 .main-nav {
   &:not(.main-nav--index) {
     @media (max-width: $mobile-width-only) {

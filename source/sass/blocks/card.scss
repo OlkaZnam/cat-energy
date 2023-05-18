@@ -1,3 +1,5 @@
+@import "../global/variables.scss";
+
 .card {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -8,9 +10,15 @@
   border-top: 1px solid #EBEBEB;
 
   @media (min-width: $tablet-width) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    //display: flex;
+    //flex-direction: column;
+    //align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "img"
+                         "link"
+                         "list"
+                         "button";
     padding: 0 37px 39px;
     border-top: none;
     background-image: linear-gradient(to bottom, $contrast-text-color 80px, $bg-color 80px);
@@ -18,6 +26,7 @@
 
   &__link {
     grid-area: link;
+    justify-self: center;
     text-decoration: none;
   }
 
@@ -44,10 +53,11 @@
     }
   }
 
-  &__img {
+  &__img, &__picture {
     grid-area: img;
     align-self: center;
     justify-self: center;
+    width: auto;
 
     @media (min-width: $tablet-width) {
       margin-bottom: 28px;

@@ -185,10 +185,16 @@ button {
   font-family: "Oswald", "Arial", sans-serif;
   color: #FFFFFF;
   text-align: center;
-  background: url("../../img/background/promo-bg.jpg"), linear-gradient(#63a63b 0, #63a63b 302px, #FFFFFF 302px);
+  background: url("../../img/background/promo/promo-small.jpg"), linear-gradient(#63a63b 0, #63a63b 302px, #FFFFFF 302px);
   background-color: #68B738;
   background-repeat: no-repeat;
   background-position: 50% 0;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .promo {
+    background-size: auto 302px, auto;
+    background-image: url("../../img/background/promo/promo-small@2x.jpg"), linear-gradient(#63a63b 0, #63a63b 302px, #FFFFFF 302px);
+  }
 }
 @media (min-width: 768px) {
   .promo {
@@ -215,14 +221,22 @@ button {
     background-color: #63a63b;
     background-position: 0 100%;
     background-repeat: no-repeat;
-    background-image: url(../../img/background/promo-large.jpg);
+    background-image: url(../../img/background/promo/promo-large.jpg);
   }
+}
+@media (min-width: 1300px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1300px) and (min-resolution: 2dppx) {
+  .promo::after {
+    background-image: url(../../img/background/promo/promo-large@2x.png);
+  }
+}
+.promo__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 @media (min-width: 768px) {
   .promo__container {
     position: relative;
-    display: flex;
-    flex-direction: column;
     align-items: flex-start;
     padding: 0 90px 526px;
   }
@@ -350,6 +364,7 @@ button {
     display: grid;
     grid-template-columns: repeat(2, 570px);
     gap: 40px 80px;
+    justify-content: center;
   }
 }
 .catalog-sections__item {
@@ -1284,9 +1299,9 @@ button {
 }
 @media (min-width: 768px) {
   .card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "img" "link" "list" "button";
     padding: 0 37px 39px;
     border-top: none;
     background-image: linear-gradient(to bottom, #FFFFFF 80px, #F2F2F2 80px);
@@ -1294,6 +1309,7 @@ button {
 }
 .card__link {
   grid-area: link;
+  justify-self: center;
   text-decoration: none;
 }
 .card__heading {
@@ -1320,13 +1336,14 @@ button {
     line-height: 1.05;
   }
 }
-.card__img {
+.card__img, .card__picture {
   grid-area: img;
   align-self: center;
   justify-self: center;
+  width: auto;
 }
 @media (min-width: 768px) {
-  .card__img {
+  .card__img, .card__picture {
     margin-bottom: 28px;
   }
 }
@@ -1624,7 +1641,7 @@ button {
 
 .offer {
   position: relative;
-  background: url("../../img/background/offer-bg.jpg");
+  background: url("../../img/background/offer-bg.jpg") no-repeat center;
   background-color: #68B738;
   padding: 186px 61px 43px 58px;
   text-align: center;
@@ -1633,14 +1650,14 @@ button {
   .offer {
     padding: 71px 124px 69px 422px;
     text-align: left;
-    background: url("../../img/background/offer-medium.jpg");
+    background: url("../../img/background/offer-medium.jpg") no-repeat center;
   }
 }
 @media (min-width: 1300px) {
   .offer {
     padding: 185px 42px 42px;
     text-align: center;
-    background: url("../../img/background/offer-bg.jpg");
+    background: url("../../img/background/offer-bg.jpg") no-repeat center;
   }
 }
 .offer::before {
