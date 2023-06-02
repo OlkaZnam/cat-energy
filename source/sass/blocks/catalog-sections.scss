@@ -1,3 +1,5 @@
+@import "../global/variables.scss";
+
 .catalog-sections {
   margin-bottom: 20px;
 
@@ -18,10 +20,54 @@
     }
   }
 
+  &__item-header {
+    display: flex;
+    align-items: center;
+    column-gap: 19px;
+    margin-bottom: 22px;
+
+    @media (min-width: $desktop-width) {
+      column-gap: 62px;
+      margin-bottom: 39px;
+    }
+  }
+
+  &__item-figure {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: $main-color;
+    border-radius: 50%;
+
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      top: 22%;
+      right: 62px;
+      width: 200px;
+      height: 200px;
+    }
+
+    @media (min-width: $desktop-width) {
+      position: static;
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  &__item-image--slim {
+    width: 70%;
+    height: auto;
+  }
+
+  &__item-image--pro {
+    width: 130%;
+  }
+
   &__item {
     display: flex;
     flex-direction: column;
-    max-width: 708px;
     margin: 0 auto 20px auto;
     padding: 30px 33px 22px 20px;
     background-color: $bg-color;
@@ -44,9 +90,6 @@
   }
 
   &__title {
-    position: relative;
-    margin-bottom: 29px;
-    padding-left: 71px;
     font-family: $title-font;
     font-weight: 400;
     font-size: 24px;
@@ -55,91 +98,13 @@
     color: $title-color;
 
     @media (min-width: $tablet-width) {
-      position: static;
-      margin-bottom: 24px;
-      padding-left: 0;
+      order: -1;
       font-size: 36px;
       line-height: 1;
     }
 
     @media (min-width: $desktop-width) {
-      padding-left: 162px;
-      margin-bottom: 73px;
-    }
-
-    &::before {
-      position: absolute;
-      left: 0;
-      top: -5px;
-      width: 50px;
-      height: 50px;
-      content: "";
-      background-color: $main-color;
-      border-radius: 50%;
-
-      @media (min-width: $tablet-width) {
-        top: 90px;
-        left: 450px;
-        width: 200px;
-        height: 200px;
-      }
-
-      @media (min-width: $desktop-width) {
-        top: 45px;
-        left: 60px;
-        width: 100px;
-        height: 100px;
-      }
-    }
-
-    &::after {
-      position: absolute;
-      left: -15px;
-      top: -13px;
-      z-index: 2;
-      width: 75px;
-      height: 75px;
-      content: "";
-      background-position: center;
-      background-repeat: no-repeat;
-
-      @media (min-width: $tablet-width) {
-        top: 53px;
-        left: 420px;
-        width: 270px;
-        height: 270px;
-      }
-
-      @media (min-width: $desktop-width) {
-        top: 26px;
-        left: 40px;
-        width: 134px;
-        height: 134px;
-      }
-    }
-
-    &--slim::after {
-      background-image: url("../../img/icons/cat-slim.svg");
-
-      @media (min-width: $tablet-width) {
-        background-size: 140px 194px;
-      }
-
-      @media (min-width: $desktop-width) {
-        background-size: 70px 97px;
-      }
-    }
-
-    &--pro::after {
-      background-image: url("../../img/icons/cat-pro.svg");
-
-      @media (min-width: $tablet-width) {
-        background-size: 268px 112px;
-      }
-
-      @media (min-width: $desktop-width) {
-        background-size: 134px 56px;
-      }
+      order: 1;
     }
   }
 
@@ -166,7 +131,11 @@
   }
 
   &__link {
-    position: relative;
+    //position: relative;
+    display: grid;
+    grid-template-columns: max-content 32px;
+    align-items: center;
+    gap: 17px;
     font-family: $title-font;
     font-size: 16px;
     line-height: 1;
@@ -180,17 +149,25 @@
     }
 
     &::after {
-      position: absolute;
-      left: 100px;
-      top: 2px;
       width: 24px;
-      height: 12px;
+      height: 10px;
       content: "";
-      background: url("../../img/icons/arrow.svg") center no-repeat;
+      background-repeat: no-repeat;
+      background-position: 100% 50%;
+      background-image: url("../../img/icons/arrow.svg");
+    }
 
-      @media (min-width: $tablet-width) {
-        left: 120px;
-        top: 8px;
+    &:hover {
+      &::after {
+        width: 32px;
+      }
+    }
+
+    &:active {
+      opacity: 0.3;
+
+      &::after {
+        width: 32px;
       }
     }
   }

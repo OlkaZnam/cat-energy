@@ -2,10 +2,38 @@
 
 .logo {
   display: grid;
-  grid-template-columns: 40px 1fr;
+  grid-template-columns: min-content 1fr;
   gap: 12px;
   align-items: center;
   grid-column: 1 / 3;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 14px;
+  }
+
+
+  &__image {
+    width: 33px;
+    height: 37px;
+
+    @media (min-width: $tablet-width) {
+      width: 60px;
+      height: 50px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 70px;
+      height: 60px;
+    }
+  }
 
   &__sign {
     justify-self: center;

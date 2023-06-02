@@ -16,43 +16,30 @@
   }
 
   &__item {
-    width: 23px;
-    height: 23px;
     list-style-type: none;
-    background-repeat: no-repeat;
-    background-position: center;
 
     @media (min-width: $tablet-width) {
-      width: 33px;
-      height: 33px;
       margin: 14px;
-    }
-
-    &--vk {
-      background-image: url("../../img/icons/vk.svg");
-
-      @media (min-width: $tablet-width) {
-        background-size: 30px 22px;
-      }
-    }
-
-    &--instagram {
-      background-image: url("../../img/icons/instagram.svg");
-
-      @media (min-width: $tablet-width) {
-        background-size: 23px 23px;
-      }
-    }
-
-    &--facebook {
-      background-image: url("../../img/icons/facebook.svg");
-
-      @media (min-width: $tablet-width) {
-        background-size: 28px 32px;
-      }
     }
   }
 
+  .social__link {
+    display: block;
+    padding: 8px;
 
+    color: #666666;
+
+    &:hover {
+      color: $main-color;
+    }
+
+    &:active {
+      color: rgba($main-color, 0.3);
+    }
+
+    svg {
+      display: block;
+    }
+  }
 }
 

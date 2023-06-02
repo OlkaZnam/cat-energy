@@ -10,6 +10,20 @@
   color: $main-text-color;
   text-decoration: none;
 
+  &:hover {
+    .developer__image {
+      color: $main-color;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    .developer__image {
+      color: $main-color;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     min-width: 163px;
   }

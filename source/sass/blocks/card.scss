@@ -57,10 +57,16 @@
     grid-area: img;
     align-self: center;
     justify-self: center;
-    width: auto;
+    max-width: 140px;
+    height: auto;
 
     @media (min-width: $tablet-width) {
       margin-bottom: 28px;
+      max-width: 168px;
+    }
+
+    @media (min-width: $desktop-width) {
+      max-width: 172px;
     }
   }
 

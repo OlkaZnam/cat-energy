@@ -1,6 +1,7 @@
 @import "../global/variables.scss";
 
 .field {
+  position: relative;
   display: flex;
   align-items: center;
 
@@ -12,16 +13,23 @@
     text-transform: uppercase;
     border: 1px solid #E7E7E7;
 
-    &[name=e-mail] {
-      background-repeat: no-repeat;
-      background-position: right 20px top 50%;
-      background-image: url(../../img/icons/mail.svg);
+    &:not(:placeholder-shown):invalid {
+      outline: 2px solid #FF8282;
+      outline-offset: -2px;
     }
 
-    &[name=phone] {
-      background-repeat: no-repeat;
-      background-position: right 20px top 50%;
-      background-image: url(../../img/icons/phone.svg);
+    &:not(:placeholder-shown):invalid + .field__icon {
+      color: #FF8282;
+    }
+
+    &:hover {
+      outline: 2px solid #CDCDCD;
+      outline-offset: -2px;
+    }
+
+    &:focus {
+      outline: 2px solid $main-text-color;
+      outline-offset: -2px;
     }
 
     @media (min-width: $tablet-width) {
@@ -32,8 +40,12 @@
 
     &::placeholder {
       font-family: $title-font;
-      //color: $main-text-color;
     }
+  }
+
+  &__icon {
+    position: absolute;
+    right: 16px;
   }
 
   &__lead {

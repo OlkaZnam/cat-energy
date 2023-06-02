@@ -14,9 +14,8 @@
 
   @media (min-resolution: 2dppx) {
     background-size: auto 302px, auto;
-    background-image:
-            url("../../img/background/promo/promo-small@2x.jpg"),
-            linear-gradient(#63a63b 0, #63a63b 302px, $contrast-text-color 302px);
+    background-image: url("../../img/background/promo/promo-small@2x.jpg"),
+    linear-gradient(#63a63b 0, #63a63b 302px, $contrast-text-color 302px);
   }
 
   @media (min-width: $tablet-width) {
@@ -30,8 +29,11 @@
     margin-bottom: 82px;
   }
 
-  &::after {
-    @media (min-width: $desktop-width) {
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+
+    &::after {
       content: "";
       position: absolute;
       top: -200px;
@@ -45,7 +47,8 @@
       background-image: url(../../img/background/promo/promo-large.jpg);
 
       @media (min-resolution: 2dppx) {
-        background-image:  url(../../img/background/promo/promo-large@2x.png);
+        background-size: auto 696px;
+        background-image: url(../../img/background/promo/promo-large@2x.png);
       }
     }
   }
@@ -97,10 +100,12 @@
     @media (min-width: $tablet-width) {
       position: absolute;
       bottom: 0;
-      left: 0;
+      left: 50%;
       z-index: -1;
       width: 100%;
+      max-width: 75vw;
       height: auto;
+      transform: translateX(-50%);
     }
 
     @media (min-width: $desktop-width) {
@@ -108,6 +113,7 @@
       left: calc(50% - 162px);
       width: 552px;
       height: 499px;
+      transform: none;
     }
   }
 

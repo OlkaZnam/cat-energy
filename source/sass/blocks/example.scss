@@ -30,7 +30,7 @@
     @media (min-width: $desktop-width) {
       display: grid;
       grid-template-columns: 436px 1fr;
-      column-gap: 205px;
+      column-gap: 13.47vw;
     }
   }
 
@@ -75,9 +75,9 @@
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(2, 124px);
+    grid-template-columns: repeat(2, 1fr);
     column-gap: 32px;
-    margin-bottom: 20px;
+    margin-bottom: 34px;
 
     @media (min-width: $desktop-width) {
       grid-template-columns: repeat(2, 162px);
@@ -88,20 +88,39 @@
 
   &__item {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
+    padding: 14px 8px 0;
+    border: 1px solid #cdcdcd;
+    border-radius: 4px;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 16px;
+    }
   }
 
   &__title {
-    max-width: 77px;
+    width: 87px;
+    margin-bottom: -12px;
+    padding: 0 4px;
     font-family: $text-font;
     font-size: 12px;
     line-height: 1;
     color: $main-text-color;
     text-align: center;
+    text-transform: lowercase;
+    background-color: $bg-color-darker;
 
     @media (min-width: $tablet-width) {
+      width: auto;
+      margin-bottom: -6px;
+      padding: 0 7px;
       font-size: 14px;
+      background-color: #ffffff;
+    }
+
+    @media (min-width: $desktop-width) {
+      background-color: $bg-color-darker;
     }
   }
 
@@ -111,6 +130,7 @@
     font-size: 24px;
     line-height: 1;
     color: $title-color;
+    text-transform: uppercase;
 
     @media (min-width: $tablet-width) {
       font-size: 30px;
@@ -146,7 +166,60 @@
     }
   }
 
+  &__view {
+    margin: 0 auto;
+    max-width: 708px;
+
+    @media (min-width: $desktop-width) {
+      max-width: 570px;
+    }
+  }
+
   &__images {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 15px;
+
+    @media (min-width: $tablet-width) {
+      display: grid;
+      grid-template-columns: 50% 1fr;
+      padding: 0 58px;
+      overflow: hidden;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 0;
+      width: 570px;
+    }
+  }
+
+  &__image {
+    display: none;
+    align-self: center;
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+      overflow: hidden;
+    }
+
+    &--after {
+      @media (min-width: $tablet-width) {
+        justify-content: end;
+      }
+    }
+
+    &--active {
+      display: block;
+    }
+
+    img {
+
+
+      @media (min-width: $tablet-width) {
+        width: 594px;
+        height: 511px;
+        max-width: none;
+      }
+    }
   }
 }

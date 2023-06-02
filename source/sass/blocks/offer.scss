@@ -2,21 +2,39 @@
 
 .offer {
   position: relative;
-  background: url("../../img/background/offer-bg.jpg") no-repeat center;
-  background-color: $main-color;
+  margin: 0 auto;
+  max-width: 280px;
   padding: 186px 61px 43px 58px;
+  background: url("../../img/background/offer-bg.jpg") no-repeat center;
+  background-size: cover;
+  background-color: $main-color;
   text-align: center;
-  
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/background/offer-bg@2x.jpg");
+  }
+
   @media (min-width: $tablet-width) {
+    max-width: 707px;
     padding: 71px 124px 69px 422px;
     text-align: left;
     background: url("../../img/background/offer-medium.jpg") no-repeat center;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/background/offer-medium@2x.jpg");
+    }
   }
 
   @media (min-width: $desktop-width) {
     padding: 185px 42px 42px;
     text-align: center;
     background: url("../../img/background/offer-bg.jpg") no-repeat center;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/background/offer-bg@2x.jpg");
+    }
   }
 
   &::before {

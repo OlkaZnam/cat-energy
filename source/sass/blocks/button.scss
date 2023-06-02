@@ -15,6 +15,16 @@
   text-decoration: none;
   border: none;
   background-color: $main-color;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #5EAA2F;
+  }
+
+  &:active {
+    color: rgba($contrast-text-color, 0.3);
+    background-color: #5EAA2F;
+  }
 
   @media (min-width: $tablet-width) {
     min-height: 54px;

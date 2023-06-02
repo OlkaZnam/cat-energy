@@ -10,6 +10,7 @@
   border-top: 1px solid #EBEBEB;
 
   @media (min-width: $tablet-width) {
+    margin-top: 80px;
     padding: 38px;
     border: 1px solid #EBEBEB;
   }
@@ -55,7 +56,7 @@
 
 
     @media (min-width: $tablet-width) {
-      margin-bottom: 87px;
+      flex-grow: 1;
       font-size: 16px;
       line-height: 1.12;
     }
@@ -67,6 +68,15 @@
     line-height: 1.25;
     color: $main-text-color;
     background-color: $bg-color;
+
+    &:hover {
+      background-color: #EBEBEB;
+    }
+
+    &:active {
+      color: rgba($main-text-color, 0.3);
+      background-color: #EBEBEB;
+    }
 
     @media (min-width: $tablet-width) {
       min-height: 40px;

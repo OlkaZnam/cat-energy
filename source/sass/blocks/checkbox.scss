@@ -1,0 +1,58 @@
+@import "../global/variables.scss";
+
+.checkbox {
+
+
+  &__control {
+    &:not(:checked) ~ .checkbox__body .checkbox__check-icon {
+      display: none;
+    }
+
+    &:disabled ~ .checkbox__body {
+      opacity: 0.3;
+    }
+
+    &[type="radio"] {
+      &:not(:checked) ~ .checkbox__body .checkbox__emulator::after {
+        display: none;
+      }
+
+      & ~ .checkbox__body .checkbox__emulator {
+        border-radius: 50%;
+
+        &::after {
+          content: "";
+          width: 50%;
+          height: 50%;
+          background-color: $main-color;
+          border-radius: inherit;
+        }
+      }
+    }
+  }
+
+  &__body {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    cursor: pointer;
+  }
+
+  &__emulator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #CDCDCD;
+
+    &:hover {
+      border-color: #BABABA;
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
